@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://qfx46xnk5gk8"]
+
+[ext_resource type="Script" uid="uid://dlcjh5hcakgjb" path="res://character_select_icon.gd" id="1_mcp8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc8wj"]
+size = Vector2(180, 180)
+
+[node name="CharacterSelectIcon" type="Node2D"]
+script = ExtResource("1_mcp8f")
+
+[node name="Character" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.187
+anchor_top = 0.187
+anchor_right = 0.187
+anchor_bottom = 0.187
+offset_right = 180.0
+offset_bottom = 180.0
+
+[node name="Area" type="Area2D" parent="Character"]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Character/Area"]
+position = Vector2(90.64, 90.64)
+shape = SubResource("RectangleShape2D_yc8wj")
+
+[connection signal="input_event" from="Character/Area" to="." method="_on_area_input_event"]

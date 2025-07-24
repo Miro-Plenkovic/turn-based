@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7colim0dg45i"]
+
+[ext_resource type="Texture2D" uid="uid://j0rp1mn7twmg" path="res://Icons/DarkGrey.png" id="1_t1lyx"]
+[ext_resource type="Script" uid="uid://drxr3oq8uj8bg" path="res://turn_order.gd" id="2_r8i4s"]
+
+[node name="TurnOrder" type="TextureRect"]
+offset_left = 1055.0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_t1lyx")
+expand_mode = 1
+script = ExtResource("2_r8i4s")
+
+[node name="TurnOrder1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 9.0
+offset_right = 150.0
+offset_bottom = 84.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TurnOrder2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 89.0
+offset_right = 150.0
+offset_bottom = 164.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TurnOrder3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 169.0
+offset_right = 150.0
+offset_bottom = 244.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TurnOrder4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 250.0
+offset_right = 150.0
+offset_bottom = 325.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TurnOrder5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 330.0
+offset_right = 150.0
+offset_bottom = 405.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TurnOrder6" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 410.0
+offset_right = 150.0
+offset_bottom = 485.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TurnOrder7" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 490.0
+offset_right = 150.0
+offset_bottom = 565.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TurnOrder8" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 570.0
+offset_right = 150.0
+offset_bottom = 645.0
+expand_mode = 1
+stretch_mode = 4

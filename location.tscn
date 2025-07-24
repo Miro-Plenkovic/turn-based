@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnp1800oa8j0n"]
+
+[ext_resource type="Script" uid="uid://duy1sj2dgj2qs" path="res://character.gd" id="1_4281l"]
+[ext_resource type="PackedScene" uid="uid://c38ygro4dol7d" path="res://character.tscn" id="2_7vasj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vasj"]
+
+[node name="Location" type="Node2D"]
+script = ExtResource("1_4281l")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_7vasj")
+
+[node name="Character" parent="." instance=ExtResource("2_7vasj")]
+script = null
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

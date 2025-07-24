@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c38ygro4dol7d"]
+
+[ext_resource type="Script" uid="uid://duy1sj2dgj2qs" path="res://character.gd" id="1_glpr6"]
+[ext_resource type="Texture2D" uid="uid://bnm8r77erd3f0" path="res://Icons/Timer.png" id="2_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://bwprenu5bknn1" path="res://Icons/red.png" id="2_wa5vi"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_glpr6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -27.0
+offset_top = 48.0
+offset_right = 13.0
+offset_bottom = 71.0
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.588235)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -50.0
+offset_top = 100.0
+offset_right = 50.0
+offset_bottom = 116.0
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_wa5vi")
+texture_progress = ExtResource("2_pjt0s")

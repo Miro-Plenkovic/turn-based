@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://kkvgukjwwecf"]
+
+[node name="Bench" type="TextureRect"]
+anchors_preset = -1
+anchor_left = 1.134
+anchor_top = -1.385
+anchor_right = 1.134
+anchor_bottom = -1.385
+offset_left = -0.0280151
+offset_top = 0.0150032
+offset_right = 102.972
+offset_bottom = 138.015
+
+[node name="Bench1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 88.0
+offset_bottom = 41.0
+text = "
+"
+
+[node name="Bench2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 52.0
+offset_right = 88.0
+offset_bottom = 83.0
+text = "
+"
+
+[node name="Bench3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 93.0
+offset_right = 88.0
+offset_bottom = 124.0
+text = "
+"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="Bench1" to="." method="_on_bench_1_pressed"]
+[connection signal="pressed" from="Bench2" to="." method="_on_bench_2_pressed"]
+[connection signal="pressed" from="Bench3" to="." method="_on_bench_3_pressed"]

@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd3li2tmhvg4"]
+
+[ext_resource type="Texture2D" uid="uid://c7bjrse3kcnsc" path="res://Icons/Blue.png" id="1_q2gfm"]
+[ext_resource type="Script" uid="uid://drsm4ebe3td0g" path="res://action_box.gd" id="2_b6jrf"]
+
+[node name="ActionBox" type="TextureRect"]
+offset_top = 485.0
+offset_right = 675.0
+offset_bottom = 720.0
+texture = ExtResource("1_q2gfm")
+expand_mode = 1
+script = ExtResource("2_b6jrf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 138.0
+offset_bottom = 33.0
+
+[node name="UpArrow" type="Button" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 20.0
+offset_right = 191.0
+offset_bottom = 51.0
+text = "^"
+
+[node name="Slot1" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 27.0
+offset_top = 60.0
+offset_right = 169.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 18
+
+[node name="Slot2" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 181.0
+offset_top = 60.0
+offset_right = 323.0
+offset_bottom = 99.0
+
+[node name="Slot3" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 26.0
+offset_top = 104.0
+offset_right = 169.0
+offset_bottom = 144.0
+
+[node name="Slot4" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 181.0
+offset_top = 104.0
+offset_right = 324.0
+offset_bottom = 143.0
+
+[node name="DownArrow" type="Button" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 150.0
+offset_right = 191.0
+offset_bottom = 181.0
+text = "v"
+
+[node name="Switch" type="Button" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 61.0
+offset_right = 541.0
+offset_bottom = 100.0
+text = "Switch"
+
+[connection signal="pressed" from="UpArrow" to="." method="_on_up_arrow_pressed"]
+[connection signal="pressed" from="Slot1" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="Slot2" to="." method="_on_slot_2_pressed"]
+[connection signal="pressed" from="Slot3" to="." method="_on_slot_3_pressed"]
+[connection signal="pressed" from="Slot4" to="." method="_on_slot_4_pressed"]
+[connection signal="pressed" from="DownArrow" to="." method="_on_down_arrow_pressed"]
+[connection signal="pressed" from="Switch" to="." method="_on_switch_pressed"]

@@ -1,0 +1,186 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3qk68iye77lp"]
+
+[ext_resource type="Script" uid="uid://w4la6bpnt80e" path="res://character_select.gd" id="1_fes3t"]
+[ext_resource type="Texture2D" uid="uid://28wseo1t8kly" path="res://Icons/Background.png" id="1_jdigy"]
+[ext_resource type="Texture2D" uid="uid://j0rp1mn7twmg" path="res://Icons/DarkGrey.png" id="2_aq61o"]
+[ext_resource type="PackedScene" uid="uid://qfx46xnk5gk8" path="res://character_select_icon.tscn" id="5_tlgw2"]
+
+[node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_fes3t")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_jdigy")
+expand_mode = 1
+
+[node name="CharacterSelect" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 560.0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_aq61o")
+expand_mode = 1
+
+[node name="Character1" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(45, 45)
+characterName = "Character1"
+
+[node name="Character2" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(270, 45)
+characterName = "Character2"
+
+[node name="Character3" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(495, 45)
+characterName = "Character3"
+
+[node name="Character4" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(45, 270)
+characterName = "Character4"
+
+[node name="Character5" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(270, 270)
+characterName = "Character5"
+
+[node name="Character6" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(495, 270)
+characterName = "Character6"
+
+[node name="Character7" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(45, 495)
+characterName = "Character7"
+
+[node name="Character8" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(270, 495)
+characterName = "Character8"
+
+[node name="Character9" parent="Background/CharacterSelect" instance=ExtResource("5_tlgw2")]
+position = Vector2(495, 495)
+characterName = "Character9"
+
+[node name="Party" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 540.0
+offset_bottom = 160.0
+
+[node name="PartyMember1" type="TextureRect" parent="Background/Party"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 124.0
+offset_bottom = 120.0
+
+[node name="PartyMember2" type="TextureRect" parent="Background/Party"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 20.0
+offset_right = 248.0
+offset_bottom = 120.0
+
+[node name="PartyMember3" type="TextureRect" parent="Background/Party"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 20.0
+offset_right = 372.0
+offset_bottom = 120.0
+
+[node name="PartyMember4" type="TextureRect" parent="Background/Party"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 20.0
+offset_right = 496.0
+offset_bottom = 120.0
+
+[node name="CharacterInfo" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 217.0
+offset_right = 550.0
+offset_bottom = 710.0
+
+[node name="InfoBG" type="TextureRect" parent="Background/CharacterInfo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.063
+anchor_top = -0.018
+anchor_right = 0.063
+anchor_bottom = -0.018
+offset_left = -14.02
+offset_top = 89.08
+offset_right = 485.98
+offset_bottom = 489.08
+texture = ExtResource("2_aq61o")
+expand_mode = 1
+
+[node name="NameLabel2" type="Label" parent="Background/CharacterInfo/InfoBG"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 29.0
+offset_right = 61.0
+offset_bottom = 52.0
+text = "Health:"
+
+[node name="NameValue" type="Label" parent="Background/CharacterInfo/InfoBG"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 29.0
+offset_right = 110.0
+offset_bottom = 52.0
+
+[node name="HealthLabel" type="Label" parent="Background/CharacterInfo/InfoBG"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 33.0
+text = "Name:"
+
+[node name="HealthValue" type="Label" parent="Background/CharacterInfo/InfoBG"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 10.0
+offset_right = 105.0
+offset_bottom = 33.0
+
+[node name="AttackLabel" type="Label" parent="Background/CharacterInfo/InfoBG"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 47.0
+offset_right = 61.0
+offset_bottom = 70.0
+text = "Attack:"
+
+[node name="AttackValue" type="Label" parent="Background/CharacterInfo/InfoBG"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 47.0
+offset_right = 109.0
+offset_bottom = 70.0
+
+[node name="SpeedLabel" type="Label" parent="Background/CharacterInfo/InfoBG"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 65.0
+offset_right = 61.0
+offset_bottom = 88.0
+text = "Speed:"
+
+[node name="SpeedValue" type="Label" parent="Background/CharacterInfo/InfoBG"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 65.0
+offset_right = 107.0
+offset_bottom = 88.0
+
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 172.0
+offset_right = 120.0
+offset_bottom = 192.0
+disabled = true
+text = "Enter combat"
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
